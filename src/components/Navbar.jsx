@@ -6,19 +6,32 @@ const Navbar = ({ user, onLogin, onLogout }) => {
   });
 
   const handleLogout = () => {
-    googleLogout(); // Clear Google OAuth session
-    onLogout(); // Clear user data in your app
+    googleLogout(); 
+    onLogout(); 
   };
 
-  return (
-    <nav>
-      <div>Ecommerce App</div>
-      {user ? (
-        <button onClick={handleLogout}>Logout</button>
-      ) : (
-        <button onClick={login}>Login with Google</button>
-      )}
-    </nav>
+  return ( <>
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Ecommerce App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <a class="nav-link active" href="/">Home</a>
+      <div class="navbar-nav ms-auto"  >
+        {user ? (
+            <button type="button" class="btn btn-dark btn-sm p-1" onClick={handleLogout}>Logout</button>
+        ) : (
+            <button type="button" class="btn btn-success btn-sm p-1" onClick={login}>Login with Google</button>
+        )}
+      </div>
+    </div>
+  </div>
+</nav>
+  </>
   );
 };
 
