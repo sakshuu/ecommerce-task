@@ -39,12 +39,19 @@ const Home = () => {
     <div>
       <Navbar user={user} onLogin={setUser} onLogout={() => setUser(null)} />
       <Sidebar categories={categories} onCategoryClick={handleCategoryFilter} />
-      <input
-        type="text"
-        placeholder="Search products..."
-        onChange={(e) => handleSearch(e.target.value)}
-      />
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    
+        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+  <i className="bi bi-search" style={{ position: 'absolute', left: 16 }}></i>
+  <input
+    type="text"
+    className="m-2"
+    placeholder="Search products..."
+    onChange={(e) => handleSearch(e.target.value)}
+    style={{ paddingLeft: 30 }}
+  />
+</div>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', marginTop:'5px' }}>
         {filteredProducts.map(product => (
           <ProductCard key={product.id} product={product} />
         ))}

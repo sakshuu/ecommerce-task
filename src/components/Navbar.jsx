@@ -25,7 +25,7 @@ const Navbar = ({ user, onLogin, onLogout }) => {
         {user ? (
             <button type="button" class="btn btn-dark btn-sm p-1" onClick={handleLogout}>Logout</button>
         ) : (
-            <button type="button" class="btn btn-success btn-sm p-1" onClick={login}>Login with Google</button>
+            <button type="button" class="btn btn-success btn-sm p-1" onClick={login}>Login with  <i class="bi bi-google" ></i>oogle   </button>
         )}
       </div>
     </div>

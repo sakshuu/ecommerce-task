@@ -6,7 +6,7 @@ const Sidebar = ({ categories, onCategoryClick }) => {
       <h3 className='text-center mt-5 mb-5'>Categories</h3>
       <ul>
         {categories.map(category => (
-          <li key={category} className='p-3' style={{cursor:'pointer'}} onClick={() => onCategoryClick(category)}>
+          <li key={category} className='p-3 text-capitalize' style={{cursor:'pointer'}} onClick={() => onCategoryClick(category)}>
             {category}
           </li>
         ))}
