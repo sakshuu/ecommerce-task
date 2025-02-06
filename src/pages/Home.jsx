@@ -136,9 +136,9 @@ const Home = () => {
       </div>
 
       {/* Pagination */}
-      <div className="pagination">
+      <div className="pagination d-flex justify-content-center">
         {Array.from({ length: Math.ceil(filteredProducts.length / productsPerPage) }, (_, i) => (
-          <button key={i + 1} onClick={() => paginate(i + 1)}>
+   <button className='btn btn-primary m-2' key={i + 1} onClick={() => paginate(i + 1)}>
             {i + 1}
           </button>
         ))}

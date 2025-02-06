@@ -14,7 +14,7 @@
 // export default ProductCard;
 
 import React, { useState, useContext } from 'react';
-import { CartContext } from '../assets/context/CartContext';
+import { CartContext } from '../context/CartContext';
 // import { CartContext } from '../context/CartContext';
 
 
@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
         <h4 className='mt-4'>{product.title}</h4>
         <h6><i className="bi bi-currency-rupee"></i>{product.price}</h6>
         <p>{product.category}</p>
-        <button onClick={(e) => { e.stopPropagation(); addToCart(product); }}>Add to Cart</button>
+        <button onClick={(e) => { e.stopPropagation(); addToCart(product); }} className='btn btn-primary'>Add to Cart</button>
       </div>
 
       {/* Modal */}
