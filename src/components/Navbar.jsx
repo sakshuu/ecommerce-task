@@ -58,7 +58,8 @@ const Navbar = ({ user, onLogin, onLogout }) => {
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg ${darkMode ? 'bg-dark text-white' : 'bg-light'}`}>
+    // <nav className={`navbar navbar-expand-lg ${darkMode ? 'bg-dark text-white' : 'bg-light'}`}>
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">Ecommerce App</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
@@ -67,9 +68,7 @@ const Navbar = ({ user, onLogin, onLogout }) => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <a className="nav-link active" href="/">Home</a>
           <div className="navbar-nav ms-auto">
-            <button className="btn btn-secondary btn-sm p-1 me-2" onClick={toggleDarkMode}>
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
-            </button>
+           
             {user ? (
               <button type="button" className="btn btn-dark btn-sm p-1" onClick={handleLogout}>Logout</button>
             ) : (

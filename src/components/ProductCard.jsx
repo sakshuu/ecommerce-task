@@ -62,7 +62,7 @@ const ProductCard = ({ product }) => {
             <p>{product.description}</p>
             <p><strong>Price:</strong> ${product.price}</p>
             <p><strong>Category:</strong> {product.category}</p>
-            <button onClick={closeModal}>Close</button>
+            <button className='btn btn-primary' onClick={closeModal}>Close</button>
           </div>
         </div>
       )}
